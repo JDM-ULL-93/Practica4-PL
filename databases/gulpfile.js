@@ -30,4 +30,7 @@ gulp.task("c5-get-guttenberg", shell.task(
     */
     //'tar -xvjf rdf-files.tar.bz2'
 	'npm run test'
+	'​​node​​ ​​rdf-to-bulk.js​​ ​​../data/cache/epub/​​ ​​>​​ ​​../data/bulk_pg.ldj'
 ));
+
+gulp.task('default',['c5-get-guttenberg']);
