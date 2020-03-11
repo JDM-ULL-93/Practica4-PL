@@ -3,4 +3,6 @@ node_js:
     - 12.15.0
 before_script:
     - cd databases/
+    - npm install -g gulp-cli
     - npm install
+script: gulp

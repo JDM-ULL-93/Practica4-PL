@@ -45,7 +45,7 @@ npm install --save-dev​​ ​​--save-exact chai@3.5.0
 ```
 
 Vamos a explicar las opciones:
-1)"--save-dev" .  Guarda en 'devDependencies'
+1)"--save-dev" .  Es una opción por defecto, podemos omitirlo, viene a decir que se instalará solo en local(solo en nuestro proyecto)
 2)"--save-exact" . Descarga e instala la versión especificada despues del '@'
 
 
@@ -106,3 +106,30 @@ Deberiamos seleccionarlo de esta forma (esta es una forma posible, pero hay much
 $('pgterms\\:agent').find("pgterms\\:deathdate").toArray()[0].text()
 ```
 Es importante recalcar que, en CSS, la sintaxis es como sigue "nodo:hover|focus|..." por lo tanto, si tenemos un nodo que se llama, como en el ejemplo, "pgterms:deathdate", tenemos que escapar ':' y eso lo hacemos con '\', pero, dado que en otro lenguaje, js esta vez, ese es otro elemento reservado, tambien tenemos que volver a escaparlo, y de ahi "\\:" 
+
+Posteriormente, aprendí a como hacer debug de las baterias de pruebas que mocka ejecuta. Para ello, lo primero es añadir el siguiente script a "package.json":
+
+```json
+  "scripts": {
+	.
+	.
+	.
+    "test:debug": "node --inspect node_modules/mocha/bin/_mocha --watch --no-timeouts"
+```
+
+Lo siguiente es ejecutar :
+
+```bash
+npm run test:debug
+```
+
+Accedemos a nuestro navegador (edge mi caso):
+
+[debugging_edge](img/debugging_edge.PNG)
+
+Le damos a "inspect". Abrimos la pestaña de "Source",seleccionamos el script sobre el que colocar punto de interrupcion (si no aparece, bastará con añadirlo dandole a "Add folder to workspace"):
+
+[debugging_edge2](img/debugging_edge2.PNG)
+
+Dado que hemos ejecutado mocha con la opción --watch, bastará con cambiar cualquier fichero .js dentro de su alcance de analisís para provocar su ejecución.
+

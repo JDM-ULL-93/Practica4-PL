@@ -12,5 +12,12 @@ module.exports = rdf => {
     book.subjects = $('[rdf\\:resource$="/LCSH"]')
         .parent().find('rdf\\:value')
         .toArray().map(elem => $(elem).text());
+    book.lcc =  $('[rdf\\:resource$="/LCC"]')
+        .parent().find('rdf\\:value').text();
+
+    book.downloads =  $("pgterms\\:file").toArray().map(function(ele,index){
+        return { link : $(ele).attr("rdf:about"), type: $(ele).find('[rdf\\:datatype$="/IMT"]').text()}
+    });
+
     return book;
 };

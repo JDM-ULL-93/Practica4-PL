@@ -24,5 +24,16 @@ describe('parseRDF', () => {
             .that.is.an('array').with.lengthOf(2)
             .and.contains('Military art and science -- Early works to 1800')
             .and.contains('War -- Early works to 1800');
+		///Actividad
+		expect(book).to.have.a.property('lcc')
+            .that.is.an('string').with.lengthOf(1) 
+            .and.not.contains("I")
+            .and.not.contains("O")
+            .and.not.contains("W")
+            .and.not.contains("X")
+            .and.not.contains("Y"); 
+            
+        expect(book).to.have.a.property('downloads')
+            .that.is.an('array');
     });
 });

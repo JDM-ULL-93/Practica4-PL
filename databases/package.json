@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "test:watch": "mocha --watch --reporter min &"
+    "test:watch": "mocha --watch --reporter min &",
+    "test:debug": "node --inspect node_modules/mocha/bin/_mocha --watch --no-timeouts"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   "homepage": "https://github.com/ULL-ESIT-PL-1920/p2-t1-testing-JDM-ULL-93#readme",
   "devDependencies": {
     "chai": "3.5.0",
+    "gulp": "^4.0.2",
     "mocha": "^7.1.0"
   },
   "dependencies": {
