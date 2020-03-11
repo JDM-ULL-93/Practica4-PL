@@ -103,4 +103,4 @@ Deberiamos seleccionarlo de esta forma (esta es una forma posible, pero hay much
 ```js
 $('pgterms\\:agent').find("pgterms\\:deathdate").toArray()[0].text()
 ```
-Es importante recalcar que, en CSS, "<nodo>:hover|focus|..." por lo tanto, si tenemos un nodo que se llama, como en el ejemplo, "pgterms:deathdate", tenemos que escapar ':' y eso lo hacemos con '\', pero, dado que en otro lenguaje, js esta vez, ese es otro elemento reservado, tambien tenemos que volver a escaparlo, y de ahi "\\:" 
+Es importante recalcar que, en CSS, la sintaxis es como sigue "nodo:hover|focus|..." por lo tanto, si tenemos un nodo que se llama, como en el ejemplo, "pgterms:deathdate", tenemos que escapar ':' y eso lo hacemos con '\', pero, dado que en otro lenguaje, js esta vez, ese es otro elemento reservado, tambien tenemos que volver a escaparlo, y de ahi "\\:" 
