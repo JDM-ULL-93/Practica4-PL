@@ -33,4 +33,4 @@ gulp.task("c5-get-guttenberg", shell.task(
 	'​​node​​ ​​rdf-to-bulk.js​​ ​​../data/cache/epub/​​ ​​>​​ ​​../data/bulk_pg.ldj'
 ));
 
-gulp.task('default',['c5-get-guttenberg']);
+gulp.task('default', gulp.series('c5-get-guttenberg'));
