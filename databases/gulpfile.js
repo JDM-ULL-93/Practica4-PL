@@ -29,8 +29,8 @@ gulp.task("c5-get-guttenberg", shell.task(
          detail.
     */
     //'tar -xvjf rdf-files.tar.bz2'
-	'npm run test && ' +
-	'​​node​​ ​​rdf-to-bulk.js​​ ​​../data/cache/epub/​​ ​​>​​ ​​../data/bulk_pg.ldj'
+	'npm run test'
+	//'​​node​​ ​​rdf-to-bulk.js​​ ​​../data/cache/epub/​​ ​​>​​ ​​../data/bulk_pg.ldj'
 ));
 
 gulp.task('default', gulp.series('c5-get-guttenberg'));
