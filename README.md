@@ -1,5 +1,7 @@
 # Practica 4 - Procesadores de Lenguaje
 
+[![Build Status](https://travis-ci.org/JDM-ULL-93/Practica4-PL.svg?branch=master)](https://travis-ci.org/JDM-ULL-93/Practica4-PL)
+
 Antes de nada, recordar inicializar nuestro raiz del proyecto con:
 
 ```bash
